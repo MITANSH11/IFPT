@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.calcappfx.FirstFrameController">
+    <top>
+        <VBox fx:id="header" prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField alignment="CENTER" prefHeight="38.0" prefWidth="600.0" text="Investment and Finance Planning Tracker">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </TextField>
+            </children>
+        </VBox>
+    </top>
+   <bottom>
+        <VBox fx:id="centerBox" prefHeight="378.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="networth" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" text="Net Worth" textOverrun="CLIP">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="13.0" left="100.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="taxCalculatorButton" layoutX="10.0" layoutY="10.0" maxWidth="200.0" mnemonicParsing="false" onAction="#loadTaxCalculator" text="Tax Calculator">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+                </Button>
+                <Button fx:id="sipCalculatorButton" layoutX="10.0" layoutY="20.0" maxWidth="200.0" mnemonicParsing="false" onAction="#loadSIPCalculator" text="SIP Calculator">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+                </Button>
+                <Button fx:id="insurance" layoutX="10.0" layoutY="20.0" maxWidth="200.0" mnemonicParsing="false" onAction="#loadinsurance" text="Insurance Calculator">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="8.0" left="100.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="compinterest" layoutX="10.0" layoutY="20.0" maxWidth="200.0" mnemonicParsing="false" text="Compound Interest">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="100.0" top="8.0" />
+                    </VBox.margin>
+                </Button>
+            <HBox layoutX="10.0" layoutY="216.0" prefHeight="36.0" prefWidth="329.0">
+               <children>
+                  <ComboBox fx:id="comboBox1" maxWidth="200.0" minHeight="35.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#loadmutual" promptText="Mutual Funds" style="-fx-font-family: Times New Roman; -fx-font-size: 16px; -fx-font-weight: bold;">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Future Value Calculator" />
+                           <String fx:value="EMI Calculator" />
+                           <String fx:value="Rate of Return" />
+                           <String fx:value="Bond Yield" />
+                        </FXCollections>
+                     </items>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button fx:id="calbtn2" alignment="CENTER" contentDisplay="TOP" disable="true" mnemonicParsing="false" opacity="0.0" text="Select" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="329.0">
+               <children>
+                      <ComboBox fx:id="comboBox2" maxWidth="200.0" minHeight="35.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#loadsip" promptText="SIP Calculator" style="-fx-font-family: Times New Roman; -fx-font-size: 16px; -fx-font-weight: bold;">
+      
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Future Value Calculator" />
+                                  <String fx:value="EMI Calculator" />
+                                  <String fx:value="Rate of Return" />
+                                  <String fx:value="Bond Yield" />
+      
+                              </FXCollections>
+                          </items>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets left="100.0" />
+                     </opaqueInsets>
+                      </ComboBox>
+                  <Button fx:id="calbtn1" alignment="CENTER" contentDisplay="TOP" disable="true" mnemonicParsing="false" opacity="0.0" text="Select" textAlignment="CENTER" textFill="#31d8ec">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="14.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            </children>
+        </VBox>
+   </bottom>
+</BorderPane>
