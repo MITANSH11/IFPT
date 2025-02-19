@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.calcappfx.AssetAllocationController">
+
+    <Label text="Asset Allocation Calculator" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Monthly Income:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="monthlyIncomeField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Investment %:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="investmentPercentageField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Age:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="ageField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+
+    <Button text="Calculate" fx:id="calculateButton" onAction="#calculateAllocation" />
+
+    <Label fx:id="totalInvestmentLabel" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+
+    <VBox spacing="5">
+        <Label fx:id="equityLabel"/>
+        <Label fx:id="debtLabel"/>
+        <Label fx:id="goldLabel"/>
+        <Label fx:id="emergencyLabel"/>
+    </VBox>
+
+    <Button text="Back" fx:id="backButton" onAction="#backToMain"/>
+
+</VBox>

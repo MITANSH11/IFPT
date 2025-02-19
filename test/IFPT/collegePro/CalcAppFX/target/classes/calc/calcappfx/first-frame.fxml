@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.calcappfx.FirstFrameController">
+    <top>
+        <VBox fx:id="header" prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField alignment="CENTER" editable="false" prefHeight="38.0" prefWidth="600.0" text="Investment and Finance Planning Tracker">
+                    <font>
+                        <Font name="Californian FB" size="24.0" />
+                    </font>
+                </TextField>
+            </children>
+        </VBox>
+    </top>
+   <bottom>
+        <VBox fx:id="centerBox" prefHeight="378.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <AmbientLight lightOn="true">
+               <color>
+                  <Color red="0.4967251420021057" green="0.9789473414421082" blue="0.01450292393565178" />
+               </color>
+            </AmbientLight>
+                <Button fx:id="networth" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" text="Net Worth" textOverrun="CLIP">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="13.0" left="100.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" maxWidth="200.0" mnemonicParsing="false" onAction="#openAssetAllocation" text="Asset Allocation">
+                <font>
+                    <Font name="Arial Bold" size="17.0" />
+                </font>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+                </Button>
+
+
+                <Button fx:id="taxCalculatorButton" layoutX="10.0" layoutY="10.0" maxWidth="200.0" mnemonicParsing="false" onAction="#loadTaxCalculator" text="Tax Calculator">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+                </Button>
+                <Button fx:id="sipCalculatorButton" layoutX="10.0" layoutY="20.0" maxWidth="200.0" mnemonicParsing="false" onAction="#loadSIPCalculator" text="SIP Calculator">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+                </Button>
+                <Button fx:id="insurance" layoutX="10.0" layoutY="20.0" maxWidth="200.0" mnemonicParsing="false" onAction="#loadinsurance" text="Insurance Calculator">
+                    <font>
+                        <Font name="Arial Bold" size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="8.0" left="100.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+            <HBox layoutX="10.0" layoutY="216.0" prefHeight="36.0" prefWidth="329.0">
+               <children>
+                  <Button fx:id="calbtn2" alignment="CENTER" contentDisplay="TOP" disable="true" mnemonicParsing="false" opacity="0.0" text="Select" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="329.0">
+               <children>
+                  <Button fx:id="calbtn1" alignment="CENTER" contentDisplay="TOP" disable="true" mnemonicParsing="false" opacity="0.0" text="Select" textAlignment="CENTER" textFill="#31d8ec">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="14.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            </children>
+        </VBox>
+   </bottom>
+</BorderPane>

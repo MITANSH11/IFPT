@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="398.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calc.calcappfx.LifeInsuranceController">
+    <!-- Age Label and TextField -->
+    <Label layoutX="132.0" layoutY="115.0" text="Age:" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="115.0" />
+    <TextField fx:id="ageField" layoutX="167.0" layoutY="111.0" prefWidth="200" />
+
+    <!-- Coverage Amount Label and TextField -->
+    <Label layoutX="40.0" layoutY="160.0" text="Coverage Amount ($):" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="160.0" />
+    <TextField fx:id="coverageField" layoutX="167.0" layoutY="156.0" prefWidth="200" />
+
+    <!-- Policy Term Label and TextField -->
+    <Label layoutX="55.0" layoutY="203.0" text="Policy Term (years):" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="203.0" />
+    <TextField fx:id="termField" layoutX="167.0" layoutY="199.0" prefWidth="200" />
+
+    <!-- Calculate Button -->
+    <Button fx:id="calculateButton" layoutX="174.0" layoutY="238.0" onAction="#calculatePremium" text="Calculate Premium" />
+
+    <!-- Premium Result Label -->
+    <Label layoutX="21.0" layoutY="312.0" text="Estimated Monthly Premium ($):" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="312.0" />
+    <Label fx:id="premiumResultLabel" layoutX="199.0" layoutY="312.0" text="0.00" />
+   <Button id="backbutton" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#backtomainpage" onMouseClicked="#backtomainpage" text="back" />
+</AnchorPane>
